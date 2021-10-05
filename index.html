@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Email</title>
 
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -42,8 +42,8 @@
 
                     <div class="single-input mt-5">
                         <div class="single-input mt-0">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-input" id="email" placeholder="Example@example.com">
+                            <label for="loginCredential" class="form-label">Email Address</label>
+                            <input type="email" class="form-input" id="loginCredential" placeholder="Example@example.com">
                         </div>
                     </div>
 
@@ -57,14 +57,43 @@
                     <div class="button-control">
                         <a href="register.html"
                         class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">Register</a>
-                        <a href="password.html"
-                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">Next</a>
+                        <a href="#"
+                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded" id="loginSubmit" aria-describedby="index">Next</a>
 
                     </div>
 
                 </form>
             </div>
+        </div>
+    </div>
 
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal-custom">
+
+            <div class="modal-close text-danger" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modal-icon">
+                <i class="fas fa-user modal-user-icon"></i>
+            </div>
+            <div class="modal-user-times text-white bg-danger">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modal-body-custom mt-1">
+
+                <div class="modal-guide ">
+                    <p class="text-medium">Please Enter Your Email</p>
+                    <span class="text-small">You Can't login Without Entering Your Email</span>
+                </div>
+
+                <a href="#"
+                   class="btn bg-purple rounded-pill mt-5 py-2 px-5  text-white btn-submit rounded" onclick="modalClose()">Retry
+                </a>
+
+            </div>
 
         </div>
     </div>
