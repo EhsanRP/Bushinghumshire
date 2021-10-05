@@ -1,7 +1,13 @@
 const modalOpener = document.getElementById('modalOpener')
+const modalCloseBTN = document.getElementById('modalClose')
+const showPasswordBTN = document.getElementById('showPassword')
 
 const modal = document.getElementById('modal')
-const modalCloseBTN = document.getElementById('modalClose')
+const passwordBox = document.getElementById('passwordBox')
+
+if (showPasswordBTN != null) {
+    showPasswordBTN.addEventListener('click', showPassword)
+}
 
 if (modalOpener != null) {
     modalOpener.addEventListener('click', modalOpen)
@@ -14,6 +20,15 @@ function modalOpen() {
 }
 
 function modalClose() {
-
     modal.classList.remove('visible-custom')
+}
+
+function showPassword(){
+    console.log(passwordBox.attributes["type"].value )
+    if (passwordBox.attributes["type"].value === 'text'){
+        passwordBox.attributes["type"].value = 'password'
+    }
+    else if(passwordBox.attributes["type"].value === 'password'){
+        passwordBox.attributes["type"].value = 'text'
+    }
 }
