@@ -10,9 +10,8 @@ const modal = document.getElementById('modal')
 const passwordBox = document.getElementById('passwordBox')
 const formItem = document.getElementById('loginCredential')
 
-
-//Button Null Checks and Event Listeners
 if (showPasswordBTN != null) {
+    console.log(showPasswordBTN)
     showPasswordBTN.addEventListener('click', showPassword)
 }
 
@@ -39,7 +38,7 @@ function modalClose() {
 }
 
 function showPassword() {
-    console.log(passwordBox.attributes["type"].value)
+    console.log(passwordBox.attributes)
     if (passwordBox.attributes["type"].value === 'text') {
         passwordBox.attributes["type"].value = 'password'
     } else if (passwordBox.attributes["type"].value === 'password') {
