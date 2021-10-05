@@ -14,7 +14,7 @@
 <main>
     <div class="left-side">
         <div class="logo">
-            <img src="./img/logo.png" class="logo" alt="">
+<!--            <img src="./img/logo.png" class="logo" alt="">-->
         </div>
         <div class="guids">
                 <span class="text-small">
@@ -29,36 +29,59 @@
         <div class="content-column">
             <div class="heading">
                 <p class="text-large">
-                    Welcome to BUCKINGHUMSHIRE!
+                    Your Basic Information
                 </p>
                 <div>
-                    <p class="text-small">Please Type Your Email Addess</p>
+                    <p class="text-small">Please fill the fields correctly with your information</p>
                 </div>
             </div>
 
 
-            <div class="form">
+            <div class="form  mt-5">
                 <form action="">
 
-                    <div class="single-input">
+                    <div class="double-input">
                         <div class="single-input">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-input" id="email" placeholder="Example@example.com">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-input" id="firstName" placeholder="First Name">
+                        </div>
+
+                        <div class="single-input ms-4">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-input" id="lastName" placeholder="Last Name">
                         </div>
                     </div>
 
-                    <div class="input-remember mt-4">
-                        <div>
-                            <input type="checkbox">
-                            <span class="text-small bold ms-1">Remember Me On This Device</span>
+                    <div class="single-input mt-4">
+                        <label for="occupation" class="form-label">Occupation</label>
+                        <select name="occupation" id="occupation" class="single-select">
+                            <option value="Carer" class="select-option">Carer</option>
+                            <option value="Agent" class="select-option">Agent</option>
+                            <option value="Council Manager" class="select-option">Council Manager</option>
+                        </select>
+                    </div>
+
+                    <div class="double-input">
+                        <div class="single-input">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-input" id="address" placeholder="Address">
+                        </div>
+
+                        <div class="single-input ms-4">
+                            <label for="zipCode" class="form-label">Zip Code</label>
+                            <input type="text" class="form-input" id="zipCode" placeholder="Zip Code">
                         </div>
                     </div>
 
                     <div class="button-control">
-                        <a href="password.html"
-                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">Register</a>
-                        <a href="password.html"
-                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">Next</a>
+                        <a href="index.html"
+                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">
+                            <i class="fas fa-chevron-left"></i>
+                            <span class="btn-span-back">Back To Login</span>
+                        </a>
+                        <a href="#"
+                           id="modalOpener"
+                           class="btn bg-purple rounded-pill mt-4 py-2 px-5 text-white btn-submit rounded">Submit</a>
 
                     </div>
 
@@ -68,6 +91,40 @@
 
         </div>
     </div>
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal-custom">
+
+            <div class="modal-close text-danger" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modal-icon">
+                <span><i class="fas fa-lock"></i></span>
+            </div>
+
+            <div class="modal-body-custom mt-4">
+
+                <div class="modal-guide">
+                    <p class="text-medium">Forgot Your Password?</p>
+                    <span class="text-small">Don't Worry! Enter your registered email address to get the password reset instructions</span>
+                </div>
+
+                <div class="single-input">
+                    <label for="modalEmail" class="form-label">Email</label>
+                    <input type="email" class="form-input" id="modalEmail" placeholder="Example@website.com">
+                </div>
+
+                <a href="resetpassword.html"
+                   class="btn bg-purple rounded-pill mt-5 py-2 px-5  text-white btn-submit rounded">Reset My Password
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
 </main>
 
 <script src="./js/script.js"></script>

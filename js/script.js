@@ -1,13 +1,19 @@
+const modalOpener = document.getElementById('modalOpener')
+
 const modal = document.getElementById('modal')
-const forgetLink = document.getElementById('forgotPassword')
-const modalClose = document.getElementById('modalClose')
+const modalCloseBTN = document.getElementById('modalClose')
 
-forgetLink.addEventListener('click',function (){
-    modal.style.zIndex = "100"
-    modal.style.opacity = "1"
-})
+if (modalOpener != null) {
+    modalOpener.addEventListener('click', modalOpen)
+}
 
-modalClose.addEventListener('click',function (){
-    modal.style.zIndex = "-100"
-    modal.style.opacity = "0"
-})
+modalCloseBTN.addEventListener('click', modalClose)
+
+function modalOpen() {
+    modal.classList.toggle('visible-custom')
+}
+
+function modalClose() {
+
+    modal.classList.remove('visible-custom')
+}

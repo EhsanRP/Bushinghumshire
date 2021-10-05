@@ -148,6 +148,13 @@ main {
     outline: none;
 }
 
+.single-select{
+    border: 1px solid var(--border-light);
+    outline: none;
+    border-radius: 10px;
+    padding: 0.8rem 0rem 0.8rem 1rem
+}
+
 .input-remember {
     display: flex;
     align-items: flex-start;
@@ -185,9 +192,9 @@ main {
     width: 100%;
     position: absolute;
     background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    z-index: -100;
     transition: 0.5s ease opacity;
+    z-index: -100;
+    opacity: 0;
 }
 
 .modal-custom {
@@ -211,6 +218,7 @@ main {
     right: 2rem;
     top: 1.5rem;
     cursor: pointer;
+    z-index: inherit;
 }
 .modal-header-custom{
     padding-top: 1rem;
@@ -238,6 +246,25 @@ main {
     align-items: center;
     text-align: center;
 }
+
+.visible-custom{
+    z-index: 100;
+    opacity: 1;
+}
+
+.double-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.double-input input{
+    width: 100%;
+    padding-right: 7rem;
+}
+
+
 
 
 
