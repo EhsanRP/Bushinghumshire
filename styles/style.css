@@ -379,11 +379,19 @@ main {
     align-items: center;
     justify-content: left;
     padding: 1rem 0 1rem 1rem;
+    opacity: 0.5;
 }
 
 .navbar-link:hover {
-    background-color: white;
-    color: var(--primary);
+    background-color: #6b6cb8;
+    color: white;
+    opacity: 1;
+}
+
+.active-link{
+    opacity: 1;
+    background-color: #6b6cb8;
+    color: white;
 }
 
 .panel {
