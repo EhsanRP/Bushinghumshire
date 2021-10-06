@@ -1,5 +1,5 @@
 //Buttons
-const modalOpener = document.getElementById('modalOpener')
+const forgotPasswordBTN = document.getElementById('forgotPasswordBTN')
 const modalCloseBTN = document.getElementById('modalClose')
 const showPasswordBTN = document.getElementById('showPassword')
 const loginSubmit = document.getElementById('loginSubmit')
@@ -7,16 +7,22 @@ const loginSubmit = document.getElementById('loginSubmit')
 
 //Elements
 const modal = document.getElementById('modal')
-const passwordBox = document.getElementById('passwordBox')
+const passwordBox = document.querySelector('.password')
 const formItem = document.getElementById('loginCredential')
+const forgotPasswordModal = document.getElementById('forgotPasswordModal')
+const forgotPasswordModalCloseBTN = document.getElementById('forgotPasswordModalCloseBTN')
 
 if (showPasswordBTN != null) {
     console.log(showPasswordBTN)
     showPasswordBTN.addEventListener('click', showPassword)
 }
 
-if (modalOpener != null) {
-    modalOpener.addEventListener('click', modalOpen)
+if (forgotPasswordBTN != null) {
+    forgotPasswordBTN.addEventListener('click', forgotPasswordModalOpen)
+}
+
+if (forgotPasswordModalCloseBTN != null) {
+    forgotPasswordModalCloseBTN.addEventListener('click', forgotPasswordModalClose)
 }
 
 if (modalCloseBTN != null) {
@@ -35,6 +41,15 @@ function modalOpen() {
 
 function modalClose() {
     modal.classList.remove('visible-custom')
+}
+
+function forgotPasswordModalOpen() {
+    forgotPasswordModal.classList.toggle('visible-custom')
+}
+
+function forgotPasswordModalClose() {
+    forgotPasswordModal.classList.remove('visible-custom')
+    window.location.href = window.location.href.replace('password','resetpassword')
 }
 
 function showPassword() {
