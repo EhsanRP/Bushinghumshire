@@ -47,9 +47,11 @@ function forgotPasswordModalOpen() {
     forgotPasswordModal.classList.toggle('visible-custom')
 }
 
-function forgotPasswordModalClose() {
+function forgotPasswordModalClose(btn) {
     forgotPasswordModal.classList.remove('visible-custom')
-    window.location.href = window.location.href.replace('password','resetpassword')
+    if (btn){
+        window.location.href = window.location.href.replace('password','resetpassword')
+    }
 }
 
 function showPassword() {
