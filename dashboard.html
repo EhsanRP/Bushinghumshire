@@ -88,6 +88,7 @@
             </div>
         </div>
         <div class="panel-content">
+
             <div class="row-custom">
                 <div class="card-box">
                     <div class="card-box-top">
@@ -96,9 +97,10 @@
 
                     <div class="card-box-bottom">
                         <span class="card-box-escalation">132</span>
-                        <div class="card-box-progress progress-positive" >
+                        <div class="card-box-progress progress-positive">
                             <span class="card-box-percentage ">17%</span>
-                            <span class="progress-arrow"><i class="fas fa-long-arrow-alt-right progress-arrow-up"></i></span>
+                            <span class="progress-arrow"><i
+                                    class="fas fa-long-arrow-alt-right progress-arrow-up"></i></span>
                         </div>
                     </div>
                 </div>
@@ -109,7 +111,7 @@
 
                     <div class="card-box-bottom">
                         <span class="card-box-escalation">23</span>
-                        <div class="card-box-progress progress-negative" >
+                        <div class="card-box-progress progress-negative">
                             <span class="card-box-percentage ">9%</span>
                             <span class="progress-arrow"><i class="fas fa-long-arrow-alt-right progress-arrow-down"></i></span>
                         </div>
@@ -122,33 +124,89 @@
 
                     <div class="card-box-bottom">
                         <span class="card-box-escalation">1464</span>
-                        <div class="card-box-progress progress-positive" >
+                        <div class="card-box-progress progress-positive">
                             <span class="card-box-percentage ">32%</span>
-                            <span class="progress-arrow"><i class="fas fa-long-arrow-alt-right progress-arrow-up"></i></span>
+                            <span class="progress-arrow"><i
+                                    class="fas fa-long-arrow-alt-right progress-arrow-up"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="card-box">
                     <div class="card-box-top">
-                        <span class="card-box-header">Number of Escalations</span>
+                        <span class="card-box-header">Escalations Count</span>
                     </div>
 
                     <div class="card-box-bottom">
                         <span class="card-box-escalation">73</span>
-                        <div class="card-box-progress progress-none" >
+                        <div class="card-box-progress progress-none">
                             <span class="card-box-percentage ">0%</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!--            //TODO implement Charts-->
+            <div class="chart-container">
+                <canvas id="myChart" class="chart">dfs</canvas>
+            </div>
+
         </div>
+
+
     </div>
 
+    <div class="modal-overlay" id="password-modal">
+
+        <div class="modal-custom">
+
+            <div class="modal-close text-danger" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="modal-body-password-custom mt-1">
+
+                <div class="modal-guide">
+                    <p class="text-medium ">Change your password</p>
+                </div>
+
+                <div class="row-custom">
+                    <div class="col-4">
+                        <div class="single-input ">
+                            <label for="" class="form-label">Current Password</label>
+                            <input type="text" class="form-input py-2 px-4" >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-input">
+                            <label for="" class="form-label">Current Password</label>
+                            <input type="text" class="form-input py-2 px-4">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="single-input">
+                            <label for="" class="form-label">Current Password</label>
+                            <input type="text" class="form-input py-2 px-4">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#"
+                   class="btn bg-purple rounded-pill mt-5 py-2 px-5  text-white btn-submit rounded" onclick="modalClose()">Retry
+                </a>
+
+            </div>
+
+        </div>
+    </div>
 
 </main>
 
 <script src="./js/script.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/55c38f87bc.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="./js/indexChart.js"></script>
+<script src="./js/IndexChangePassword.js"></script>
 </body>
 </html>
