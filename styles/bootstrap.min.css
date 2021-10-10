@@ -6050,7 +6050,8 @@ textarea.form-control-lg {
     line-break: auto;
     font-size: .875rem;
     word-wrap: break-word;
-    opacity: 0
+    opacity: 0;
+
 }
 
 .tooltip.show {
@@ -6112,7 +6113,7 @@ textarea.form-control-lg {
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
     bottom: -1px;
     border-width: 0 .4rem .4rem;
-    border-bottom-color: #000
+    border-bottom-color: #000;
 }
 
 .bs-tooltip-auto[data-popper-placement^=left], .bs-tooltip-start {
@@ -6122,7 +6123,9 @@ textarea.form-control-lg {
 .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow, .bs-tooltip-start .tooltip-arrow {
     right: 0;
     width: .4rem;
-    height: .8rem
+    height: .8rem;
+    background-color: #FAD9DB;
+
 }
 
 .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-start .tooltip-arrow::before {
@@ -6134,9 +6137,9 @@ textarea.form-control-lg {
 .tooltip-inner {
     max-width: 200px;
     padding: .25rem .5rem;
-    color: #fff;
+    color: white;
+    background-color: black;
     text-align: center;
-    background-color: #000;
     border-radius: .25rem
 }
 

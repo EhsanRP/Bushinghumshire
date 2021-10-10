@@ -4,6 +4,8 @@
 :root {
     --primary: #2C2D84;
 
+    --primary-hover: #7343de;
+
     --light-gray: #9c9d9e;
 
     --border-light: #d5dfe7;
@@ -11,6 +13,16 @@
     --background-light: #F2F3F8;
 
     --text-light-gray: #6F6F85;
+
+    --menu-text: #575962;
+
+    --dark-bg: #F4F5F8;
+
+    --dark-bg-text: #575962;
+
+    --table-stripes: #F8F9FA;
+
+    --table-date: #1174B9
 }
 
 *,
@@ -150,8 +162,8 @@ main {
     /*padding: 0.8rem 0rem 0.8rem 1rem*/
 
     display: block;
-    width: 100%;
-    padding: .375rem .75rem;
+    width: 500px;
+    padding: 1rem 3rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -216,7 +228,11 @@ main {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.5s ease opacity;
-    z-index: 100;
+    z-index: -100;
+    opacity: 0;
+}
+
+.visible-custom {
     opacity: 1;
 }
 
@@ -279,8 +295,7 @@ main {
 }
 
 
-
-.modal-guide-password-custom{
+.modal-guide-password-custom {
     text-align: left;
     margin: 0;
 }
@@ -442,12 +457,14 @@ main {
 
 .header-content {
     width: 100%;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 0 0.5rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
     gap: 3rem;
+    position: absolute;
+    right: 5%;
 }
 
 .profile-wrapper {
@@ -536,7 +553,6 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -549,14 +565,15 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-.card-box-top{
+.card-box-top {
     width: 100%;
     text-align: left;
 }
 
-.card-box-bottom{
+.card-box-bottom {
     margin-top: 1rem;
     width: 100%;
     display: flex;
@@ -575,31 +592,33 @@ main {
     font-weight: 700;
     font-size: 2rem;
 }
-.progress-positive{
+
+.progress-positive {
     font-weight: 600;
     font-size: 1.2rem;
     color: green;
 }
 
-.progress-arrow-up{
+.progress-arrow-up {
     transform: rotate(-45deg);
 }
 
-.progress-negative{
+.progress-negative {
     font-weight: 600;
     font-size: 1.2rem;
     color: red;
 }
 
-.progress-none{
+.progress-none {
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--text-light-gray);
 }
 
-.progress-arrow-down{
+.progress-arrow-down {
     transform: rotate(45deg);
 }
+
 
 @media only screen and (max-width: 1280px) {
 
@@ -612,28 +631,33 @@ main {
         gap: 0.5rem;
     }
 
-    .card-box{
+    .card-box {
         padding: 2rem 1rem;
     }
+
     .card-box-escalation {
         font-weight: 600;
         font-size: 1rem;
     }
-    .progress-negative{
+
+    .progress-negative {
         font-weight: 600;
         font-size: 1rem;
         color: red;
     }
-    .progress-positive{
+
+    .progress-positive {
         font-weight: 600;
         font-size: 1rem;
         color: green;
     }
-    .progress-none{
+
+    .progress-none {
         font-weight: 600;
         font-size: 1rem;
         color: var(--text-light-gray);
     }
+
     .card-box-header {
         font-weight: 600;
         font-size: 0.8rem;
@@ -641,18 +665,183 @@ main {
     }
 }
 
-.chart-container{
+.panel-data-container {
     background-color: white;
     padding: 2rem;
-    margin-top: 2rem;
     border-radius: 20px;
     width: 100%;
 }
 
-.chart{
+.chart {
     width: 100% !important;
 }
 
+.profile-details {
+    background-color: white;
+    position: relative;
+    top: 13rem;
+    right: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 19px -7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 287px;
+    z-index: -100;
+    opacity: 0;
+    transition: 0.7s ease-in-out opacity;
+}
+
+.top-arrow {
+    position: absolute;
+    background: transparent;
+    right: 5%;
+    top: -6%;
+    font-size: 2rem;
+    color: white;
+}
+
+.profile-details-header {
+    position: relative;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--background-light);
+    padding: 1.5rem;
+    margin-top: 0.7rem;
+}
+
+.profile-details-body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-detail-list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.last {
+    border-radius: 0 0 10px 10px;
+}
+
+
+.profile-detail-list .fas {
+    padding-right: 1rem;
+}
+
+.profile-detail-list-item-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.3rem;
+    border-bottom: 2px solid var(--background-light);
+    text-decoration: none;
+    color: var(--text-light-gray);
+}
+
+.profile-detail-list-item-link:hover {
+    background-color: #f4f4f4;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.search-input-group{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.table-option-input {
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 3rem;
+    transform: translateX(-1rem);
+}
+
+.table-option-input:focus {
+    border: none;
+    outline: none;
+}
+
+
+.search-input::placeholder {
+    color: var(--dark-bg-text);
+    font-weight: 500;
+
+}
+
+.search-input-icon {
+    color: var(--dark-bg-text);
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1;
+}
+
+.panel-table-container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-table {
+    width: 100%;
+    text-align: center;
+}
+
+.data-table thead tr td {
+    background-color: var(--dark-bg);
+    color: var(--dark-bg-text);
+    font-weight: 600;
+    padding: 1.5rem 1rem !important;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: var(--table-stripes);
+}
+
+.data-table tbody tr td {
+    padding: 1.5rem 1rem;
+}
+
+.table-date {
+    color: var(--table-date);
+}
+
+.table-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.table-link:hover {
+    color: var(--primary-hover);
+}
+
+.table-frequency-badge{
+    background-color: #E83F4B;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 200px;
+    padding: 0.5rem 0.8rem;
+
+}
 
 
 

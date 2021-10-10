@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Carers</title>
+
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<main>
+    <div class="navbar-custom">
+        <div class="navbar-brand-custom">
+            <div class="brand">
+                Buckinghumshire
+            </div>
+            <div class="burger-menu">
+                <a class="navbar-expand-custom">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a href="dashboard.html" class="navbar-link">
+                        <i class="far fa-list-alt"></i>
+                        <span class="navbar-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="escalations.html" class="navbar-link ">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="navbar-link-text">Escalations</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="procarers.html" class="navbar-link active-link">
+                        <i class="fas fa-user-check "></i>
+                        <span class="navbar-link-text">PRO Carers</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="serviceusers.html" class="navbar-link">
+                        <i class="fas fa-users"></i>
+                        <span class="navbar-link-text">Service Users</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="agencies.html" class="navbar-link">
+                        <i class="fas fa-building"></i>
+                        <span class="navbar-link-text">Agencies</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel">
+
+        <div class="header-bar">
+            <div class="header-content">
+                <div class="notifications" id="notifications">
+                    <i class="far fa-bell"></i>
+                    <div class="circle"></div>
+                </div>
+                <div class="profile-wrapper" id="profileBadge">
+                    <div class="profile-picture-wrapper">
+                        <div class="profile-pic">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-details" id="profileDetailsModal">
+                <div class="top-arrow">
+                    <i class="fas fa-sort-up"></i>
+                </div>
+                <div class="profile-details-header">
+                    <span>Profile</span>
+                </div>
+                <div class="profile-details-body">
+                    <ul class="profile-detail-list">
+                        <li class="profile-detail-list-item">
+                            <a href="#" class="profile-detail-list-item-link">
+                                Edit My Profile
+                                <i class="fas fa-chevron-right open-icon text-secondary"></i>
+                            </a>
+
+                        </li>
+                        <li class="profile-detail-list-item">
+                            <a href="#" class="profile-detail-list-item-link">
+                                Change Password
+                                <i class="fas fa-chevron-right open-icon text-secondary"></i>
+                            </a>
+                        </li>
+                        <li class="profile-detail-list-item ">
+                            <a href="#" class="profile-detail-list-item-link last text-danger">Log Out <i
+                                    class="fas fa-chevron-right open-icon text-danger"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-crumb">
+
+            <div class="location">
+                <span class="text-medium">Pro Carers</span>
+            </div>
+
+        </div>
+        <div class="panel-content">
+            <div class="panel-data-container">
+                <div class="row-custom align-items-start">
+                    <div class="search-input-group">
+                        <label for="search" class="search-input-icon"><i
+                                class="fas fa-search search-input-icon"></i></label>
+                        <input id="search" type="text" class="table-option-input search-input" placeholder="search">
+                    </div>
+
+                </div>
+
+                <div class="panel-table-container">
+                    <table class="data-table">
+                        <thead>
+                        <tr>
+                            <td>Added</td>
+                            <td>Agency</td>
+                            <td>Name</td>
+                            <td>Administrator</td>
+                            <td>Assigned to</td>
+                            <td>Phone Number</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Bob Ross +4 More</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-date">11/11/2020</td>
+                            <td>
+                                <a href="" class="table-link">Shaky Baky Agency</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">Dom Quintal</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">James</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">-</a>
+                            </td>
+                            <td>
+                                <a href="" class="table-link">+989177859558</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+<script src="./js/script.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/55c38f87bc.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+<script src="js/ProfilePanelOpener.js"></script>
+<script>
+    var tooltipTriggerElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    for (var i = 0; i < tooltipTriggerElements.length; i++) {
+        new bootstrap.Tooltip(tooltipTriggerElements[i])
+    }
+</script>
+</body>
+</html>
