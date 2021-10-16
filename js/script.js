@@ -2,6 +2,7 @@
 const forgotPasswordBTN = document.getElementById('forgotPasswordBTN')
 const modalCloseBTN = document.getElementById('modalClose')
 const showPasswordBTN = document.getElementById('showPassword')
+const showPasswordSecond = document.getElementById('showPasswordSecond')
 const loginSubmit = document.getElementById('loginSubmit')
 
 
@@ -11,10 +12,14 @@ const passwordBox = document.querySelector('.password')
 const formItem = document.getElementById('loginCredential')
 const forgotPasswordModal = document.getElementById('forgotPasswordModal')
 const forgotPasswordModalCloseBTN = document.getElementById('forgotPasswordModalCloseBTN')
+const passwordBoxSecond = document.getElementById('passwordBoxSecond')
 
 if (showPasswordBTN != null) {
-    console.log(showPasswordBTN)
     showPasswordBTN.addEventListener('click', showPassword)
+}
+
+if (showPasswordSecond != null) {
+    showPasswordSecond.addEventListener('click', showPasswordSecondFunction)
 }
 
 if (forgotPasswordBTN != null) {
@@ -60,6 +65,15 @@ function showPassword() {
         passwordBox.attributes["type"].value = 'password'
     } else if (passwordBox.attributes["type"].value === 'password') {
         passwordBox.attributes["type"].value = 'text'
+    }
+}
+
+function showPasswordSecondFunction() {
+    console.log(passwordBox.attributes)
+    if (passwordBoxSecond.attributes["type"].value === 'text') {
+        passwordBoxSecond.attributes["type"].value = 'password'
+    } else if (passwordBoxSecond.attributes["type"].value === 'password') {
+        passwordBoxSecond.attributes["type"].value = 'text'
     }
 }
 

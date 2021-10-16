@@ -92,13 +92,14 @@
 
                         </li>
                         <li class="profile-detail-list-item">
-                            <a href="#" class="profile-detail-list-item-link">
+                            <a href="#" class="profile-detail-list-item-link"  id="changePassword">
                                 Change Password
                                 <i class="fas fa-chevron-right open-icon text-secondary"></i>
                             </a>
                         </li>
                         <li class="profile-detail-list-item ">
-                            <a href="#" class="profile-detail-list-item-link last text-danger">Log Out                             <i class="fas fa-chevron-right open-icon text-danger"></i>
+                            <a href="index.html" class="profile-detail-list-item-link last text-danger">Log Out <i
+                                    class="fas fa-power-off"></i>
                             </a>
                         </li>
                     </ul>
@@ -185,7 +186,55 @@
     </div>
 
 
+    <div class="modal-overlay visible-custom" id="passwordModal">
 
+        <div class="modal-custom">
+
+            <div class="modal-close text-danger" id="passwordModalClose">
+                <i class="fas fa-times"></i>
+            </div>
+
+
+            <div class="modal-body-custom  mt-1">
+
+                <div class="modal-guide w-100 ">
+                    <p class="text-medium">Please Enter Your New Password</p>
+                </div>
+
+                <div class="row-custom ">
+                    <div class="single-input">
+                        <label for="loginCredential" class="form-label">Enter Your New Password</label>
+                        <input type="password" class="form-input password" id="loginCredential"
+                               placeholder="Password" required>
+                        <i class="fas fa-eye show-password"></i>
+                    </div>
+
+                </div>
+                <div class="row-custom ">
+                    <div class="single-input">
+                        <label for="loginCredentialRepeat" class="form-label">Enter Your New Password</label>
+                        <input type="password" class="form-input password" id="loginCredentialRepeat"
+                               placeholder="Password" required>
+                        <i class="fas fa-eye show-password"></i>
+                    </div>
+
+                </div>
+
+                <div class="modal-double-option">
+
+                    <a href="#"
+                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="closePasswordModal()">Cancel
+                    </a>
+
+                    <a href="#"
+                       class="btn bg-purple rounded-pill mt-5 py-2 px-5 text-white rounded" onclick="closePasswordModal()">Save
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </main>
 
 <script src="./js/script.js"></script>
@@ -194,6 +243,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 <script src="./js/indexChart.js"></script>
 <script src="./js/IndexChangePassword.js"></script>
-<script src="js/ProfilePanelOpener.js"></script>
+<script src="js/ProfilePanel.js"></script>
 </body>
 </html>
