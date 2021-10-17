@@ -92,14 +92,14 @@
 
                         </li>
                         <li class="profile-detail-list-item">
-                            <a href="#" class="profile-detail-list-item-link">
+                            <a href="#" class="profile-detail-list-item-link"  id="changePassword">
                                 Change Password
                                 <i class="fas fa-chevron-right open-icon text-secondary"></i>
                             </a>
                         </li>
                         <li class="profile-detail-list-item ">
-                            <a href="#" class="profile-detail-list-item-link last text-danger">Log Out
-                                <i class="fas fa-power-off"></i>
+                            <a href="index.html" class="profile-detail-list-item-link last text-danger">Log Out <i
+                                    class="fas fa-power-off"></i>
                             </a>
                         </li>
                     </ul>
@@ -465,19 +465,88 @@
                         </tbody>
                     </table>
                 </div>
-
+                <div class="pagination-details">
+                    <select name="Table Filter" id="tableFilter" class="pagination-filter">
+                        <option value="">All</option>
+                    </select>
+                    <span class="pagination-details-text">Displaying 1-10 of 100 records</span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-content">
+                    <p>2021 © All Rights Reserved For Equadesign</p>
+                    <div class="footer-links">
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#" class="footer-link">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#"  class="footer-link">Privacy and Policy</a>
+                            </li>
+                            <li>
+                                <a href="#"  class="footer-link">Terms and Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
+    <div class="modal-overlay" id="passwordModal">
+
+        <div class="modal-custom">
+
+            <div class="modal-close text-danger" id="passwordModalClose">
+                <i class="fas fa-times"></i>
+            </div>
 
 
+            <div class="modal-body-custom  mt-1">
+
+                <div class="modal-guide w-100 ">
+                    <p class="text-medium">Please Enter Your New Password</p>
+                </div>
+
+                <div class="row-custom ">
+                    <div class="single-input">
+                        <label for="loginCredential" class="form-label">Enter Your New Password</label>
+                        <input type="password" class="form-input password" id="loginCredential"
+                               placeholder="Password" required>
+                        <i class="fas fa-eye show-password"></i>
+                    </div>
+
+                </div>
+                <div class="row-custom ">
+                    <div class="single-input">
+                        <label for="loginCredentialRepeat" class="form-label">Enter Your New Password</label>
+                        <input type="password" class="form-input password" id="loginCredentialRepeat"
+                               placeholder="Password" required>
+                        <i class="fas fa-eye show-password"></i>
+                    </div>
+
+                </div>
+
+                <div class="modal-double-option">
+
+                    <a href="#"
+                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="closePasswordModal()">Cancel
+                    </a>
+
+                    <a href="#"
+                       class="btn bg-purple rounded-pill mt-5 py-2 px-5 text-white rounded" onclick="closePasswordModal()">Save
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </main>
 
 <script src="./js/script.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/55c38f87bc.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
 <script src="js/ProfilePanel.js"></script>
 <script>
     var tooltipTriggerElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');

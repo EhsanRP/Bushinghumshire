@@ -7,6 +7,19 @@ const passwordModalCloseBTN = document.getElementById('passwordModalClose')
 const profileDetailsModal = document.getElementById('profileDetailsModal')
 const passwordModal = document.getElementById('passwordModal')
 
+//Profile Panel Logic Here
+profileBadge.addEventListener('click' ,DetailsOpener)
+function DetailsOpener() {
+    console.log(profileBadge)
+    if (profileDetailsModal.style.opacity === '1'){
+        profileDetailsModal.style.opacity = '0'
+        profileDetailsModal.style.zIndex = '-100'
+    }
+    else {
+        profileDetailsModal.style.opacity = '1'
+        profileDetailsModal.style.zIndex = '100'
+    }
+}
 
 //Password Change Modal Logic Here
 changePasswordBTN.addEventListener('click',function (){
@@ -18,17 +31,4 @@ passwordModalCloseBTN.addEventListener('click',closePasswordModal)
 
 function closePasswordModal(){
     passwordModal.classList.toggle('visible-custom')
-}
-
-//Profile Panel Logic Here
-profileBadge.addEventListener('click' ,DetailsOpener)
-function DetailsOpener() {
-    if (profileDetailsModal.style.opacity === '1'){
-        profileDetailsModal.style.opacity = '0'
-        profileDetailsModal.style.zIndex = '-100'
-    }
-    else {
-        profileDetailsModal.style.opacity = '1'
-        profileDetailsModal.style.zIndex = '100'
-    }
 }
