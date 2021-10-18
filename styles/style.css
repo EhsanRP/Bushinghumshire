@@ -43,7 +43,7 @@ a {
     font-weight: 400;
 }
 
-.modal-guide{
+.modal-guide {
     display: flex;
     flex-direction: column;
 }
@@ -88,6 +88,10 @@ main {
     height: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.primary-btn-hover:hover{
+    background-color: #3d3e9d;
 }
 
 .left-side {
@@ -152,7 +156,7 @@ main {
     text-align: left;
 }
 
-.option-input{
+.option-input {
     display: flex;
     width: 100%;
     margin-top: 2rem;
@@ -187,12 +191,12 @@ main {
     appearance: none;
 }
 
-.btn-ghost{
+.btn-ghost {
     background-color: #f6f6f6;
     color: #8181A5;
 }
 
-.modal-password-input{
+.modal-password-input {
     max-width: 100%;
     padding: 1rem 3rem;
     font-size: 1rem;
@@ -542,7 +546,7 @@ main {
     border: 2px solid white;
 }
 
-.footer{
+.footer {
     position: relative;
     bottom: 0;
     height: 10rem;
@@ -554,7 +558,7 @@ main {
     align-items: center;
 }
 
-.footer-content{
+.footer-content {
     width: 100%;
     padding: 1.5rem 2rem 1rem 2rem;
     display: flex;
@@ -562,12 +566,14 @@ main {
     align-items: center;
     gap: 1rem;
 }
-.footer-content p{
+
+.footer-content p {
     color: var(--text-light-gray);
     font-size: 0.9rem;
     font-weight: 300;
 }
-.footer-links{
+
+.footer-links {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -576,12 +582,12 @@ main {
     font-weight: 300;
 }
 
-.footer-link{
+.footer-link {
     color: var(--dark-bg-text);
     text-decoration: none;
 }
 
-.footer-links:hover{
+.footer-links:hover {
     color: var(--primary-hover);
 }
 
@@ -820,7 +826,7 @@ main {
     transition: 0.3s ease;
 }
 
-.search-input-group{
+.search-input-group {
     display: flex;
     flex-direction: row;
 
@@ -897,7 +903,7 @@ main {
     color: var(--primary-hover);
 }
 
-.table-frequency-badge{
+.table-frequency-badge {
     background-color: #E83F4B;
     color: white;
     font-size: 0.9rem;
@@ -906,21 +912,21 @@ main {
 
 }
 
-.modal-double-option{
+.modal-double-option {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.pagination-container{
+.pagination-container {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.pagination-pages{
+.pagination-pages {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -928,7 +934,7 @@ main {
     color: var(--primary);
 }
 
-.pagination-badge-ghost{
+.pagination-badge-ghost {
     cursor: pointer;
     background-color: var(--dark-bg);
     color: black;
@@ -940,7 +946,8 @@ main {
     width: 35px;
     height: 35px;
 }
-.pagination-badge{
+
+.pagination-badge {
     cursor: pointer;
     color: black;
     font-size: 0.9rem;
@@ -952,28 +959,31 @@ main {
     height: 35px;
 }
 
-.active-pagination-badge{
+.active-pagination-badge {
     background-color: var(--primary);
     color: white;
 }
-.pagination-badge:hover{
-    color: white;
-    background-color: var(--primary);
-    transition: 0.4s ease color;
-}
-.pagination-badge-ghost:hover{
+
+.pagination-badge:hover {
     color: white;
     background-color: var(--primary);
     transition: 0.4s ease color;
 }
 
-.pagination-details{
+.pagination-badge-ghost:hover {
+    color: white;
+    background-color: var(--primary);
+    transition: 0.4s ease color;
+}
+
+.pagination-details {
     gap: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .pagination-filter {
     background-color: var(--dark-bg);
     border: none;
@@ -981,11 +991,24 @@ main {
     padding: 0.6rem 2rem;
 }
 
-.pagination-details-text{
+.pagination-details-text {
     font-weight: 600;
     font-size: 0.8rem;
 }
 
+.btn-create-custom {
 
+    padding: 0 1rem;
+    height: 49.59px;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: var(--primary);
+    transition: 0.4s ease;
+}
 
+/*.btn-create-custom:hover {*/
+/*    background-color: var(--primary-hover);*/
 
+/*}*/
