@@ -2,10 +2,13 @@
 const profileBadge = document.getElementById('profileBadge')
 const changePasswordBTN = document.getElementById('changePassword')
 const passwordModalCloseBTN = document.getElementById('passwordModalClose')
+const editProfileBTN = document.getElementById('editProfileBTN')
+const editProfileCloseBTN = document.getElementById('closeEditProfileModal')
 
 //Event Targets
 const profileDetailsModal = document.getElementById('profileDetailsModal')
 const passwordModal = document.getElementById('passwordModal')
+const editProfile = document.getElementById('editProfileModal')
 
 //Profile Panel Logic Here
 profileBadge.addEventListener('click' ,DetailsOpener)
@@ -27,8 +30,21 @@ changePasswordBTN.addEventListener('click',function (){
     passwordModal.classList.toggle('visible-custom')
 })
 
-passwordModalCloseBTN.addEventListener('click',closePasswordModal)
+passwordModalCloseBTN.addEventListener('click',ClosePasswordModal)
 
-function closePasswordModal(){
+function ClosePasswordModal(){
     passwordModal.classList.toggle('visible-custom')
 }
+
+//Edit Profile Logic Here
+editProfileBTN.addEventListener('click',OpenProfileModal)
+function OpenProfileModal(){
+    DetailsOpener()
+    editProfile.classList.toggle('visible-custom')
+}
+
+editProfileCloseBTN.addEventListener('click',closeEditProfileModal)
+function closeEditProfileModal() {
+    editProfile.classList.toggle('visible-custom')
+}
+

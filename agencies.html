@@ -85,7 +85,7 @@
                 <div class="profile-details-body">
                     <ul class="profile-detail-list">
                         <li class="profile-detail-list-item">
-                            <a href="#" class="profile-detail-list-item-link">
+                            <a href="#" class="profile-detail-list-item-link" id="editProfileBTN">
                                 Edit My Profile
                                 <i class="fas fa-chevron-right open-icon text-secondary"></i>
                             </a>
@@ -122,7 +122,7 @@
                                 class="fas fa-search search-input-icon"></i></label>
                         <input id="search" type="text" class="table-option-input search-input" placeholder="search">
                     </div>
-                    <button class="btn-create-custom primary-btn-hover">
+                    <button class="btn-create-custom primary-btn-hover" id="addItemBTN">
                         <i class="fas fa-plus"></i>
                         Add a new Agency
                     </button>
@@ -246,12 +246,197 @@
                 <div class="modal-double-option">
 
                     <a href="#"
-                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="closePasswordModal()">Cancel
+                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="ClosePasswordModal()">Cancel
                     </a>
 
                     <a href="#"
                        class="btn bg-purple rounded-pill mt-5 primary-btn-hover py-2 px-5 text-white rounded"
-                       onclick="closePasswordModal()">Save
+                       onclick="ClosePasswordModal()">Save
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-overlay" id="editProfileModal">
+
+        <div class="modal-custom-big">
+
+            <div class="modal-close text-danger" id="closeEditProfileModal">
+                <i class="fas fa-times"></i>
+            </div>
+
+
+            <div class="modal-body-custom  mt-1">
+
+                <div class="modal-guide  ">
+                    <p class="text-medium">Edit your profile</p>
+                </div>
+
+                <div class="row w-100">
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">First Name</label>
+                            <input type="text" class="form-input" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-input" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="option-input">
+                            <label for="occupation" class="form-label">Occupation</label>
+                            <select name="occupation" class="single-select py-3">
+                                <option value="Carer" class="select-option">Carer</option>
+                                <option value="Agent" class="select-option">Agent</option>
+                                <option value="Council Manager" class="select-option">Council Manager</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100">
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Email</label>
+                            <input type="text" class="form-input" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Date of Birth</label>
+                            <input type="text" class="form-input" placeholder="YY-MM-DD">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="single-input">
+                                <label for="lastName" class="form-label">Phone Number</label>
+                                <input type="text" class="form-input" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100">
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">City</label>
+                            <input type="text" class="form-input" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Address</label>
+                            <input type="text" class="form-input" placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">ZIP Code</label>
+                            <input type="text" class="form-input" placeholder="ZIP Code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-double-option">
+
+                    <a href="#"
+                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="ClosePasswordModal()">Cancel
+                    </a>
+
+                    <a href="#"
+                       class="btn bg-purple rounded-pill mt-5 py-2 px-5 primary-btn-hover text-white rounded"
+                       onclick="ClosePasswordModal()">Save
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="addItemModal">
+
+        <div class="modal-custom-big">
+
+            <div class="modal-close text-danger" id="closeAddItemBTN">
+                <i class="fas fa-times"></i>
+            </div>
+
+
+            <div class="modal-body-custom  mt-1">
+
+                <div class="modal-guide ">
+                    <p class="text-medium">Add a new Service User</p>
+                </div>
+                <div class="modal-h3">
+                    Agency Informations
+                </div>
+                <div class="row w-100">
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Admin</label>
+                            <input type="text" class="form-input" placeholder="Admin">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Phone Number</label>
+                            <input type="number" class="form-input" placeholder="Phone Number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100" >
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Address</label>
+                            <input type="text" class="form-input" placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">City</label>
+                            <input type="text" class="form-input" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-100 align-items-start">
+                    <div class="col-md-4">
+                        <div class="single-input">
+                            <label for="lastName" class="form-label">Zip Code</label>
+                            <input type="text" class="form-input" placeholder="Zip Code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-double-option">
+
+                    <a href="#"
+                       class="btn rounded-pill mt-5 py-2 px-5 rounded btn-ghost" onclick="CloseAddItemModal()">Cancel
+                    </a>
+
+                    <a href="#"
+                       class="btn bg-purple rounded-pill mt-5 py-2 px-5 primary-btn-hover text-white rounded"
+                       onclick="CloseAddItemModal()">Save
                     </a>
 
                 </div>
@@ -264,7 +449,8 @@
 <script src="./js/script.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/55c38f87bc.js" crossorigin="anonymous"></script>
-<script src="js/ProfilePanel.js"></script>
+<script src="./js/ProfilePanel.js"></script>
+<script src="./js/AddItem.js"></script>
 <script>
     var tooltipTriggerElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     for (var i = 0; i < tooltipTriggerElements.length; i++) {
