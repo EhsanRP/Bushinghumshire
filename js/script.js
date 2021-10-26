@@ -3,7 +3,6 @@ const forgotPasswordBTN = document.getElementById('forgotPasswordBTN')
 const modalCloseBTN = document.getElementById('modalClose')
 const loginSubmit = document.getElementById('loginSubmit')
 
-
 //Elements
 const modal = document.getElementById('modal')
 const formItem = document.getElementById('loginCredential')
